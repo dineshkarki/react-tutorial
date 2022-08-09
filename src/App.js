@@ -1,23 +1,56 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Content from './components/Content';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FunctionComponent from './components/FunctionComponent';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col, Button} from "react-bootstrap";
+import Banner1 from "./Images/banner-1.jpg";
+import FetchData from './components/FetchData';
+import FunctionAPIfetch from './components/FunctionAPIfetch';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 class='text-center'>Welcome to React JS</h1>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<Header name="dinesh" id={101} />} />
+         </Routes>
+      </BrowserRouter>
+      <Container>
+      <Row>
+        <Col className='box'>
+          <Content />
+          <Button variant="primary">
+            Primary
+          </Button>
+          <Button variant="secondary">
+              Secondary
+          </Button>
+          <Button variant="danger">
+              Danger
+          </Button>
+        </Col>
+        <Col className='box'>
+          <FunctionComponent />
+        </Col>
+        <Col>
+          <h3>Image Binding</h3>
+          <img src={Banner1} alt="banner1" style={{width:'350px'}}/>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <FetchData />
+        </Col>
+        <Col>
+          <FunctionAPIfetch />
+        </Col>
+      </Row>
+      </Container>
+      <Footer />
     </div>
   );
 }
