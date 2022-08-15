@@ -4,10 +4,11 @@ import Content from './components/Content';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FunctionComponent from './components/FunctionComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Button} from "react-bootstrap";
+import {Container, Row, Col, Button, Pagination} from "react-bootstrap";
 import Banner1 from "./Images/banner-1.jpg";
 import FetchData from './components/FetchData';
 import FunctionAPIfetch from './components/FunctionAPIfetch';
+import Paginate from './components/Pagination';
 import './App.css';
 
 function App() {
@@ -47,6 +48,12 @@ function App() {
         </Col>
         <Col>
           <FunctionAPIfetch />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+            <h3>React JS Pagination</h3>
+            <Paginate />
         </Col>
       </Row>
       </Container>
