@@ -9,7 +9,7 @@ class FetchData extends React.Component {
         }
     }
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts`,{ params: {_limit: 10} })
+        axios.get(`https://jsonplaceholder.typicode.com/posts`,{ params: {_limit: 5} })
         .then(response => 
             {
                 this.setState({posts:response.data})
@@ -20,7 +20,7 @@ class FetchData extends React.Component {
         const {posts} = this.state;
         return(
             <div>
-                <h3>Get Data from Server</h3>
+                <h4>Get Data from Server</h4>
                 <p>{posts.map(post => <div>{post.title}</div>)}</p>
             </div>
         )

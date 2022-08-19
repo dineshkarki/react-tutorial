@@ -11,3 +11,25 @@
   width: auto;
   margin: 5px;
 }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 5vh;
+  background: rgb(41 85 211);
+  color: #fff;
+}
+.movieList {
+  text-align: center;
+}
+.movieList table tr, .movieList table td {
+  border: 1px solid #ccc;
+}
+.movieList table td {
+  width: 119px;
+}
+h5 {
+  line-height: normal;
+  margin-bottom: 0;
+  font-size: large;
+}

@@ -10,6 +10,9 @@ import FetchData from './components/FetchData';
 import FunctionAPIfetch from './components/FunctionAPIfetch';
 import Paginate from './components/Pagination';
 import './App.css';
+import { MovieProvider } from './components/MovieContext';
+import MovieList from './components/MovieList';
+import Nav from './components/Nav';
 
 function App() {
   return (
@@ -43,6 +46,14 @@ function App() {
         </Col>
       </Row>
       <Row>
+        <Col>
+          <MovieProvider>
+            <div>
+              <Nav />
+              <MovieList />
+            </div>
+          </MovieProvider>
+        </Col>
         <Col>
           <FetchData />
         </Col>

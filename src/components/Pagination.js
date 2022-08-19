@@ -6,7 +6,7 @@ const Pagination = () => {
 
     const [pageCount, setpageCount] = useState(0);
   
-    let limit = 10;
+    let limit = 5;
   
     useEffect(() => {
       const getComments = async () => {
