@@ -3,15 +3,15 @@ import React, {useState, useEffect} from "react";
 
 const FunctionAPIfetch = () => {
     const [items,setItems] = useState([]);
-    const [query, setQuery] = useState('');
-    const fetchData = async() => {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users', { params: {_limit: 10} });
-        setItems(response.data);
-        console.log(response.data);
-    }
+    const [query, setQuery] = useState("");
     useEffect(() => {
-        fetchData();
-    },[])
+        const fetchData = async() => {
+            const response = await axios.get(`https://jsonplaceholder.typicode.com/users?q=${query}`);
+            setItems(response.data);
+        }
+        // Fetch Data using query length > 2 (Browser Network tab can see)
+        if(query.length === 0 || query.length > 2) fetchData();
+    },[query]);
     return(
         <div>
             <h4>Get Data &amp; Search</h4>
