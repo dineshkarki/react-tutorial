@@ -22,7 +22,7 @@ export const MovieProvider = (props) => {
     ])
     return(
         <MovieContext.Provider value={[movies, setMovies]}>
-            <h4>Context API</h4>
+            <h4 className="contextTitle">Context API</h4>
             {props.children}
         </MovieContext.Provider>
     )

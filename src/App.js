@@ -43,10 +43,6 @@ function App() {
         <Col>
           <h3>Image Binding</h3>
           <img src={Banner1} alt="banner1" style={{width:'350px'}}/>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
           <MovieProvider>
             <div>
               <Nav />
@@ -54,6 +50,8 @@ function App() {
             </div>
           </MovieProvider>
         </Col>
+      </Row>
+      <Row>
         <Col>
           <FetchData />
         </Col>

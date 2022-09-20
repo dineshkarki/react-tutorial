@@ -33,3 +33,18 @@ h5 {
   margin-bottom: 0;
   font-size: large;
 }
+.contextTitle {
+  margin-top: 30px;
+}
+.tableContainer {
+  margin-top: 10px;
+}
+.tableContainer th, .tableContainer tr, .tableContainer td {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.tableContainer th {
+  background: rgb(41 85 211);
+  color: #fff;
+  font-weight: normal;
+}

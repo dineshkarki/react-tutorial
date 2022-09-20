@@ -10,7 +10,7 @@ class FetchData extends React.Component {
         }
     }
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts`,{ params: {_limit: 8} })
+        axios.get(`https://jsonplaceholder.typicode.com/posts`,{ params: {_limit: 14} })
         .then(response => 
             {
                 this.setState({posts:response.data})
