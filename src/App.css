@@ -39,12 +39,48 @@ h5 {
 .tableContainer {
   margin-top: 10px;
 }
-.tableContainer th, .tableContainer tr, .tableContainer td {
-  border: 1px solid #ccc;
-  padding: 2px;
-}
 .tableContainer th {
   background: rgb(41 85 211);
   color: #fff;
   font-weight: normal;
+}
+.tableContainer th, .tableContainer tr, .tableContainer td {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.products {
+  overflow: hidden;
+}
+.products .card {
+  margin: 5px 0px;
+  overflow: hidden;
+  border: none !important;
+}
+.products .card-title {
+  width: 150px;
+  height: 150px;
+}
+.products .card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 0 !important;
+  justify-content: space-between;
+  height: 500px;
+  overflow-y: scroll;
+}
+.productset {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+.products .card-text {
+  height: 100px;
+  overflow-y: scroll;
+}
+.products .card img {
+  width:180px;
+  height: 180px;
+}
+.products .card a {
+  margin-top: 10px;
 }

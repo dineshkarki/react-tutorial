@@ -13,6 +13,7 @@ import './App.css';
 import { MovieProvider } from './components/MovieContext';
 import MovieList from './components/MovieList';
 import Nav from './components/Nav';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -57,6 +58,11 @@ function App() {
         </Col>
         <Col>
           <FunctionAPIfetch />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Products />
         </Col>
       </Row>
       <Row>
